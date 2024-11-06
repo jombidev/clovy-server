@@ -1,13 +1,14 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
-    kotlin("jvm") version "1.9.24"
+    val kotlinVersion = "2.0.21"
+    kotlin("jvm") version kotlinVersion
 
     id("org.springframework.boot") version "3.3.1"
     id("io.spring.dependency-management") version "1.1.5"
 
-    kotlin("plugin.jpa") version "1.9.24"
-    kotlin("plugin.spring") version "1.9.24"
+    kotlin("plugin.jpa") version kotlinVersion
+    kotlin("plugin.spring") version kotlinVersion
 }
 
 repositories {
@@ -24,7 +25,7 @@ allprojects {
     apply(plugin = "org.jetbrains.kotlin.plugin.spring")
     apply(plugin = "org.jetbrains.kotlin.plugin.jpa")
 
-    group = "dev.jombi"
+    group = "tech.clovy"
     version = "0.0.1-SNAPSHOT"
 
     dependencyManagement {
