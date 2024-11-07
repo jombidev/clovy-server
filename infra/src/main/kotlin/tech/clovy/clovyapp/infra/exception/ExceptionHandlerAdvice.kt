@@ -2,7 +2,7 @@ package tech.clovy.clovyapp.infra.exception
 
 import tech.clovy.clovyapp.common.exception.CustomException
 import tech.clovy.clovyapp.common.exception.GlobalExceptionDetails
-import tech.clovy.clovyapp.common.exception.response.ResponseError
+import tech.clovy.clovyapp.common.response.ResponseError
 import tech.clovy.clovyapp.core.auth.exception.AuthExceptionDetails
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseEntity

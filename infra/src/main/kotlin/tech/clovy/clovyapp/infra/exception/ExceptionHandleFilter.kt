@@ -11,7 +11,7 @@ import org.springframework.web.filter.OncePerRequestFilter
 import tech.clovy.clovyapp.common.exception.CustomException
 import tech.clovy.clovyapp.common.exception.ExceptionDetail
 import tech.clovy.clovyapp.common.exception.GlobalExceptionDetails
-import tech.clovy.clovyapp.common.exception.response.ResponseError
+import tech.clovy.clovyapp.common.response.ResponseError
 
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)

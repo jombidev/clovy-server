@@ -1,10 +1,9 @@
-package tech.clovy.clovyapp.common.exception.response
+package tech.clovy.clovyapp.common.response
 
-import tech.clovy.clovyapp.common.exception.ExceptionDetail
-import tech.clovy.clovyapp.common.response.ResponseEmpty
 import org.springframework.http.ResponseEntity
+import tech.clovy.clovyapp.common.exception.ExceptionDetail
 
-class ResponseError(code: String, status: Int, val detail: String) : ResponseEmpty(code, status) {
+data class ResponseError(override val code: String, override val status: Int, val detail: String) : BaseResponse {
     companion object {
         fun of(message: ExceptionDetail, vararg args: Any?) =
             ResponseEntity
