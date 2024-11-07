@@ -4,7 +4,7 @@ plugins {
     val kotlinVersion = "2.0.21"
     kotlin("jvm") version kotlinVersion
 
-    id("org.springframework.boot") version "3.3.1"
+    id("org.springframework.boot") version "3.4.0-RC1"
     id("io.spring.dependency-management") version "1.1.5"
 
     kotlin("plugin.jpa") version kotlinVersion
@@ -12,6 +12,7 @@ plugins {
 }
 
 repositories {
+    maven(url = "https://repo.spring.io/milestone/")
     mavenCentral()
 }
 
@@ -29,6 +30,7 @@ allprojects {
     version = "0.0.1-SNAPSHOT"
 
     repositories {
+        maven(url = "https://repo.spring.io/milestone/")
         mavenCentral()
     }
 
