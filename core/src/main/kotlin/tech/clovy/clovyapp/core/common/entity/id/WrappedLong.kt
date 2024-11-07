@@ -1,7 +1,7 @@
 package tech.clovy.clovyapp.core.common.entity.id
 
 @JvmInline
-value class WrappedLong(val _id: Long?) : IDWrapper<Long> {
+value class WrappedLong(private val _id: Long?) : IDWrapper<Long> {
     override val get: Long get() = _id!!
 
     companion object {
