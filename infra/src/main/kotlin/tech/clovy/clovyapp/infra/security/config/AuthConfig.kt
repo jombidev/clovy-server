@@ -20,6 +20,7 @@ class AuthConfig(private val userDetailsService: UserDetailsService) {
         return authenticationManagerBuilder.build()
     }
 
+    @Bean
     fun daoAuthProvider() = DaoAuthenticationProvider().apply {
         setUserDetailsService(userDetailsService)
         setPasswordEncoder(passwordEncoder())
