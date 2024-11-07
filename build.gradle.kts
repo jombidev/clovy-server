@@ -75,17 +75,12 @@ subprojects {
 }
 
 dependencies {
-    /*
-    runtimeOnly("com.h2database:h2")
-
-    */
-
     implementation(project(":api"))
     implementation(project(":business"))
     implementation(project(":core"))
     implementation(project(":infra"))
 
-    runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+    implementation("com.mysql:mysql-connector-j:9.1.0")
 }
 
 tasks.withType<Test> {
