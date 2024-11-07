@@ -28,16 +28,6 @@ allprojects {
     group = "tech.clovy"
     version = "0.0.1-SNAPSHOT"
 
-    dependencyManagement {
-        dependencies {
-            dependencySet("io.jsonwebtoken:0.12.6") {
-                entry("jjwt-api")
-                entry("jjwt-impl")
-                entry("jjwt-jackson")
-            }
-        }
-    }
-
     repositories {
         mavenCentral()
     }
@@ -63,6 +53,9 @@ allprojects {
 
         /// KOTLIN
         implementation(kotlin("reflect"))
+
+        /// REDIS
+        implementation("org.springframework.boot:spring-boot-starter-data-redis")
 
         /// TEST
         testImplementation("org.springframework.boot:spring-boot-starter-test")
