@@ -5,8 +5,8 @@ import kotlin.jvm.optionals.getOrNull
 
 @JvmInline
 value class FetchableId(private val _id: Long? = null) {
-    val id get() = _id!!
-    fun <T : Any> fetch(repository: JpaRepository<T, Long>) = repository.findById(id).getOrNull()
+    val get get() = _id!!
+    fun <T : Any> fetch(repository: JpaRepository<T, Long>) = repository.findById(get).getOrNull()
 
     companion object {
         val NULL = FetchableId(null)

@@ -3,6 +3,7 @@ package tech.clovy.clovyapp.core.member.entity
 import tech.clovy.clovyapp.core.common.entity.BaseIdTimeEntity
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
+import java.io.Serializable
 
 @Entity(name = "tb_member")
 data class Member(
@@ -14,4 +15,4 @@ data class Member(
 
     @Column
     val name: String,
-) : BaseIdTimeEntity()
+) : BaseIdTimeEntity(), Serializable
